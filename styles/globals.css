@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Mali";
+    margin: 0;
+    padding: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  h1 {
+    @apply font-bold text-3xl;
+    font-family: "Mali";
+  }
+  h2 {
+    @apply font-bold text-2xl;
+    font-family: "Mali";
+  }
+  h3 {
+    @apply font-bold text-xl;
+    font-family: "Mali";
+  }
+  h4 {
+    @apply font-bold text-sm uppercase;
+    letter-spacing: 2.4px;
+    font-family: "Mali";
+  }
+}
+
+.modal-content {
+  @apply w-full md:min-w-[480px]  bg-white dark:bg-black2 p-8 rounded-md;
+  font-family: "Mali";
+}
+
+.app-container {
+  @apply flex-1 flex overflow-auto  relative;
+}
+.app-container--visible {
+  width: calc(100%);
+  left: 0px;
+  transition: all 0.5s ease;
+}
+.app-container--hidden {
+  width: calc(100% + 300px);
+  left: -300px;
+  transition: all 0.5s ease;
+}
